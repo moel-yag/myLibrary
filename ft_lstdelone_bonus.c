@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moel-yag <moel-yag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/16 15:00:33 by moel-yag          #+#    #+#             */
-/*   Updated: 2024/11/16 15:37:42 by moel-yag         ###   ########.fr       */
+/*   Created: 2024/11/16 15:25:42 by moel-yag          #+#    #+#             */
+/*   Updated: 2024/11/16 15:35:58 by moel-yag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *list)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (!list || !list->next)
-		return (list);
-	while (list->next)
-		list = list->next;
-	return (list);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
+	lst = NULL;
+	return ;
 }

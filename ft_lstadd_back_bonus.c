@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moel-yag <moel-yag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/16 15:00:33 by moel-yag          #+#    #+#             */
-/*   Updated: 2024/11/16 15:37:42 by moel-yag         ###   ########.fr       */
+/*   Created: 2024/11/16 15:22:21 by moel-yag          #+#    #+#             */
+/*   Updated: 2024/11/16 15:37:07 by moel-yag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *list)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (!list || !list->next)
-		return (list);
-	while (list->next)
-		list = list->next;
-	return (list);
+	t_list	*current;
+
+	if (!lst || !new)
+		return ;
+	current = *lst;
+	if (!current)
+		*lst = new;
+	else
+	{
+		while (current->next)
+			current = current->next;
+		current->next = new;
+	}
+	return ;
 }
