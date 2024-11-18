@@ -6,7 +6,7 @@
 /*   By: moel-yag <moel-yag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:06:21 by moel-yag          #+#    #+#             */
-/*   Updated: 2024/11/05 11:48:24 by moel-yag         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:34:16 by moel-yag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	unsigned int	i;
 	char			*str;
 
+	if (!s)
+		return (NULL);
 	slen = ft_strlen(s);
 	if (start >= slen)
 		return (ft_strdup(""));

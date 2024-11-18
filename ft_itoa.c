@@ -6,7 +6,7 @@
 /*   By: moel-yag <moel-yag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 08:29:38 by moel-yag          #+#    #+#             */
-/*   Updated: 2024/11/16 10:49:41 by moel-yag         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:35:18 by moel-yag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,12 +61,6 @@ char	*ft_itoa(int n)
 
 // int main()
 // {
-//     int num = -456;
-//     char *str = ft_itoa(num);
-//     if (str)
-//     {
-//         printf("The integer as a string: %s\n", str);
-//         free(str);
-//     }
-//     return 0;
+//     char *str = ft_itoa(1);
+//     printf("%s\n", str);
 // }

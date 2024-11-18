@@ -6,7 +6,7 @@
 /*   By: moel-yag <moel-yag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:05:54 by moel-yag          #+#    #+#             */
-/*   Updated: 2024/11/03 10:54:08 by moel-yag         ###   ########.fr       */
+/*   Updated: 2024/11/18 12:31:57 by moel-yag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,3 +51,4 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	ft_move(dest_tmp, src_tmp, n);
 	return (dest);
 }
+// "hello"

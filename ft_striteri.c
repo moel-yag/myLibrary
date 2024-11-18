@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moel-yag <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: moel-yag <moel-yag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:18:15 by moel-yag          #+#    #+#             */
-/*   Updated: 2024/11/14 10:18:18 by moel-yag         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:37:37 by moel-yag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
 
+	if (!s ||!f)
+		return ;
 	i = 0;
 	while (s[i])
 	{
